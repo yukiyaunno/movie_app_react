@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = (props) => {
     const classes = useStyles();
 
+    const Logout = () => {
+      props.cookies.remove('jwt-token');
+      window.location.href = '/'
+    }
 
     return (
         <AppBar position="static">
@@ -27,7 +31,7 @@ const NavBar = (props) => {
         </button>
         <Typography variant="h5" className={classes.title}>Youtube</Typography>
 
-        <button className="logout">
+        <button className="logout" onClick={() => Logout()}>
           <FiLogOut/>
         </button>
 
