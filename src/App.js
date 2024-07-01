@@ -6,6 +6,7 @@ import createTheme from "@material-ui/core/styles/createTheme";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import NavBar from "./components/NavBar";
 import ApiContextProvider from "./context/ApiContext"
+import Main from "./components/Main";
 
 
 const theme = createTheme({
@@ -25,6 +26,7 @@ function App() {
     <ApiContextProvider>
       <MuiThemeProvider theme={theme}>
         <NavBar />
+        <Main />
       </MuiThemeProvider>
     </ApiContextProvider>
   );
